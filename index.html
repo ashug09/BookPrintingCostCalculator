@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.3/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-2">
+    <form id="form"  onsubmit="event.preventDefault(); return processForm()" >
+        <label>number of pages of book: </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="pages" type="number" name="pages" value="">
+        <br>
+        <label>GSM:  </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="gsm" type="number" name="gsm" value="">
+        <br>
+        <label>total sheets in rim: </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="sheets" type="number" name="rim" placeholder="500" value="500">
+        <br>
+
+        <label>length (in inch): </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="length" type="number" name="length" value="">
+        <br>
+        <label>width (in inch): </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="width" type="number" name="width" value="">
+
+        <p>total rim weight in kgs: <span class="mx-2 bg-gray-200 text-black" id="paper_weight_output"></span></p>
+        <br>
+        <label>cost of rim per kg: </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="cost" type="number" name="cost" value="">
+        <br>
+        <label>number of books to be printed: </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="total_books" type="number" name="total_books" value="">
+        <br>
+        <label>cost of printing per book: </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="print_cost" type="number" name="print_cost" value="">
+        <br>
+        <label>cost of binding per book: </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="binding_cost" type="number" name="binding_cost" value="">
+        <br>
+        <label>cost of cover per book: </label>
+        <br>
+        <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="cover_cost" type="number" name="cover_cost" value="">
+        <br>
+
+
+
+        <!-- output screen -->
+        <div class="bg-gray-200 rounded-xl p-2 my-5">
+
+            <h1 class="text-black my-1">cost of paper per book: ₹<span id="cost_of_paper_per_book"></span></h1>
+            <br>
+    
+            <h1 class="text-black my-1">cost of paper for <span id="cost_of_paper_for_total_books"></span></h1>
+            <br>
+    
+            <h1 class="text-black my-1">cost of making per book (including printing, binding, cover): ₹<span id="cost_of_making_per_book"></span> </h1>
+            <br>
+    
+            <h1 class="text-black my-1">cost of making total books (including printing, binding, cover): ₹<span id="cost_of_making_total_books"></span></h1>
+            <br>
+
+        </div>
+        <button class="btn btn-accent btn-sm w-full" id="submit_button" type="submit">submit</button>
+    </form>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
