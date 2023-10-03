@@ -11,8 +11,8 @@
     <div class="bg-gray-200 rounded-xl mb-4 mt-1">
         <h1 class="capitalize text-center text-black">printing cost calculator</h1>
     </div>
-    <form id="form"  onsubmit="event.preventDefault(); return processForm()" >
-        <label class="capitalize">number of pages of book: </label>
+    <form class="text-center" id="form"  onsubmit="event.preventDefault(); return processForm()" >
+        <label class="capitalize px-auto">number of pages of book: </label>
         <br>
         <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="pages" type="number" name="pages" value="">
         <br>
@@ -33,7 +33,7 @@
         <br>
         <input  class="input input-bordered input-info w-full max-w-xs input-sm" id="width" type="number" name="width" value="">
 
-        <p>total rim weight in kgs: <span class="mx-2 bg-gray-200 text-black" id="paper_weight_output"></span></p>
+        <p class="capitalize">total rim weight in kgs: <span class="mx-2 bg-gray-200 text-black" id="paper_weight_output"></span></p>
         <br>
         <label class="capitalize">cost of rim per kg: </label>
         <br>
@@ -59,24 +59,23 @@
 
 
 
-        <!-- output screen -->
-        <div class="bg-gray-200 rounded-xl p-2 my-5">
-
-            <h1 class="text-black my-1">cost of paper per book: ₹<span id="cost_of_paper_per_book"></span></h1>
-            <br>
-    
-            <h1 class="text-black my-1">cost of paper for <span id="cost_of_paper_for_total_books"></span></h1>
-            <br>
-    
-            <h1 class="text-black my-1">cost of making per book (including printing, binding, cover): ₹<span id="cost_of_making_per_book"></span> </h1>
-            <br>
-    
-            <h1 class="text-black my-1">cost of making total books (including printing, binding, cover): ₹<span id="cost_of_making_total_books"></span></h1>
-            <br>
-
-        </div>
     </form>
-    </form>
+    <!-- output screen -->
+    <div class="bg-gray-200 rounded-xl p-2 my-5">
+
+        <h1 class="text-black my-1">cost of paper per book: ₹<span id="cost_of_paper_per_book"></span></h1>
+        <br>
+
+        <h1 class="text-black my-1">cost of paper for <span id="cost_of_paper_for_total_books"></span></h1>
+        <br>
+
+        <h1 class="text-black my-1">cost of making per book (including printing, binding, cover): ₹<span id="cost_of_making_per_book"></span> </h1>
+        <br>
+
+        <h1 class="text-black my-1">cost of making total books (including printing, binding, cover): ₹<span id="cost_of_making_total_books"></span></h1>
+        <br>
+
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
